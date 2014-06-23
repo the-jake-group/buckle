@@ -1,16 +1,26 @@
 /*!
  * Buckle v1.1
+ *
+ * Copyright 2013 The Jake Group, LLC
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * We can have cool license things too.
  */
+
 
 @import "../bootstrap/bootstrap.less";
 
-// Variables, Mixins, and Reusable styles.
+//	Variables, Mixins, and Reusable styles.
+//	Try not to edit these.
 @import "variables.less";
 @import "mixins.less";
 @import "utilities.less";
 
 //	Inidividual, reusable site components.
-@import "searchbar.less";
+//	Comment out unused items to save on file size.	
+// @import "searchbar.less";
+// @import "cards.less";
 
 
 //	Base styles for site structure and text.
@@ -18,7 +28,8 @@
 @import "text.less";
 @import "nav.less";
 
-//	Bare bones files to get you started
+//	Bare bones files that contain some mostly empty
+//	CSS selectors to get you started.
 @import "header.less";
 @import "homepage.less";
 @import "content.less";
@@ -29,3 +40,10 @@
 //	Use the basic forms.less if you are generating your own form HTML.
 @import "gravity-forms.less";
 // @import "basic-forms.less";
+
+
+//	Responsive sheets
+@import "responsive-desktop.less";
+@import "responsive-below-desktop.less";
+@import "responsive-tablet.less";
+@import "responsive-mobile.less";

@@ -1,0 +1,31 @@
+@media (min-width: (@screen-tablet + 1)) and (max-width: @screen-desktop) {
+
+/* ==========================================================================
+	Utility
+	========================================================================= */
+
+	.hidden-tablet { display: none; }
+
+	.horizontal-list {
+		&.vertical-tablet > * { 
+			float: none; 
+		}
+	}
+
+	.grid-list-reset-tablet {
+		width: 100%;
+		overflow: initial;
+		position: static;
+	}	
+
+	.container {
+		max-wdith: 100%;
+		width: 100%;
+		padding: 0 15px;
+	}
+
+
+
+
+
+} // End Query
