@@ -1,0 +1,71 @@
+/* ==========================================================================
+	Cards
+	========================================================================= */
+
+	.card {
+		position: relative;
+		-webkit-perspective: 900px;
+		   -moz-perspective: 900px;
+		        perspective: 900px;
+
+		.card-side {
+			transform-style: preserve-3d;
+			-webkit-transform-style: preserve-3d;
+			backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+			height: 100%;
+			.transition( all linear .5s );
+		}
+
+		.front {
+			position: relative;
+			z-index: 15;
+		}
+
+		.back {
+			.cover;
+			z-index: 10;
+			overflow: hidden;
+			-webkit-transform: rotateY( 180deg );
+			-moz-transform: rotateY( 180deg );
+			transform: rotateY( 180deg );
+		}
+
+	}
+
+	.no-touch .card {
+		&:hover {
+			.front {
+				.front-flip();
+			}
+
+			.back {
+				.back-flip();
+			}
+		}
+	}
+
+	.touch .card {
+		&.flipped {
+			.front {
+				.front-flip();
+			}
+
+			.back {
+				.back-flip();
+			}
+		}
+	}
+
+	.front-flip() {
+		-webkit-transform: rotateY( -180deg );
+		-moz-transform: rotateY( -180deg );
+		transform: rotateY( -180deg );
+		z-index: 5
+	}
+
+	.back-flip() {
+		-webkit-transform: rotateY( 0deg );
+		-moz-transform: rotateY( 0deg );
+		transform: rotateY( 0deg );
+	}
